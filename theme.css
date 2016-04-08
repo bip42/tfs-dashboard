@@ -1,0 +1,33 @@
+        #wrap {
+        overflow: hidden;
+        }
+        .box {
+            width: 20%;
+            padding-bottom: 20%;
+                      
+
+            color: #FFF;
+            position: relative;
+            float: left;
+            }
+            .innerContent {
+                font-size: 2em; 
+                font-family: Helvetica;
+                text-align: center;
+                
+                position: absolute;
+                left: 1px;
+                right: 1px;
+                top: 1px;
+                bottom: 1px;
+                background: #66F;
+                padding: 10px;
+            }
+          
+        .red {
+            background:red;
+        }
+        
+        .green {
+            background:green;
+        }

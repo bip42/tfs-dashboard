@@ -8,6 +8,36 @@ var BuildList = [
         "key":321,
         "buildName" : "unit",
         "state" : "red"
+    },  
+     {
+        "key" : 123,
+        "buildName" : "middle",
+        "state" : "green"
+    },
+    {
+        "key":321,
+        "buildName" : "unit",
+        "state" : "red"
+    }, 
+     {
+        "key" : 123,
+        "buildName" : "middle",
+        "state" : "green"
+    },
+    {
+        "key":321,
+        "buildName" : "unit",
+        "state" : "red"
+    }, 
+     {
+        "key" : 123,
+        "buildName" : "middle",
+        "state" : "green"
+    },
+    {
+        "key":321,
+        "buildName" : "unit",
+        "state" : "red"
     }    
 ];
     
@@ -15,7 +45,19 @@ var BuildList = [
 var BuildInfoBox = React.createClass(
   {
       render : function(){
-          return <div style={{background:this.props.color}}>InfoBox {this.props.buildName}</div>          
+          
+          var innerContentClass="innerContent "+this.props.color
+          return (
+              <div className="box">
+                <div className={innerContentClass}>
+            InfoBox {this.props.buildName}
+                </div>
+             </div>
+              
+            
+          )
+          
+                   
       }      
   }  
     
@@ -32,9 +74,9 @@ var BuildDashBoard = React.createClass(
              )               
           });
           return (
-                <div>
-                    {buildsTable}
-                </div>  
+                <div id="wrap">
+                  {buildsTable}
+                </div>
           )        
       }
       
@@ -44,7 +86,7 @@ var BuildDashBoard = React.createClass(
 
 
 ReactDOM.render(
-   <div id="text">Hellou
+   <div >
         <BuildDashBoard buildList={BuildList} />
    
    </div>,
